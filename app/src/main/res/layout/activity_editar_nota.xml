@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="iocompany.ideanotevayas.Activities.EditarNota">
+
+    <include android:id="@+id/toolbarEditarNota"
+        layout="@layout/toolbar_1"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarEditarNota"
+        >
+
+        <EditText
+            android:id="@+id/DescripcionNotaEditNota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text=""
+            android:padding="16dp"
+            android:inputType="textMultiLine"
+            android:gravity="top|left"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/cancelarNotaEditNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="16dp"
+            android:src="@mipmap/ic_cancelar"
+            app:backgroundTint="@android:color/background_dark" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/FavoritoEnEditNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_favorito_full"
+            app:backgroundTint="@android:color/background_dark" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/EditNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@mipmap/ic_guardar"
+            app:backgroundTint="@android:color/background_dark" />
+    </FrameLayout>
+
+
+</RelativeLayout>

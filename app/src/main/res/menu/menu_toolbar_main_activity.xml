@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:icon="@android:drawable/ic_menu_add"
+    app:showAsAction="ifRoom"
+    >
+
+    <item
+        android:icon="@android:drawable/ic_menu_add"
+        android:id="@+id/configuraciones"
+        android:title="Configuraciones" />
+    <item
+        android:id="@+id/EnviarNota"
+        android:title="Enviar Nota" />
+    <item
+        android:id="@+id/Almacenamiento"
+        android:title="Almacenamiento" />
+    <item
+        android:id="@+id/IoTeam"
+        android:title="IO Team" />
+
+</menu>

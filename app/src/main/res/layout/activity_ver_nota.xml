@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="iocompany.ideanotevayas.Activities.VerNota"
+    android:layout_below="@+id/toolbarVerNota"
+    >
+
+    <include android:id="@+id/toolbarVerNota"
+        layout="@layout/toolbar_1"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarVerNota">
+        <TextView
+            android:id="@+id/DescripcionNotaVerNota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text=""
+            android:padding="16dp"
+            android:inputType="textMultiLine"
+            android:gravity="top|left"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+            />
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/EditNotaEnVerNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_lapiz"
+            app:backgroundTint="@android:color/background_dark" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/FavoritoEnVerNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_favorito_full"
+            app:backgroundTint="@android:color/background_dark" />
+    </FrameLayout>
+
+
+</RelativeLayout>
