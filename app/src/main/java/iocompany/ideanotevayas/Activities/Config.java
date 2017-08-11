@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import iocompany.ideanotevayas.R;
@@ -34,8 +35,13 @@ public class Config extends AppCompatActivity {
         config.add("Buscar Actualizaciones");
         config.add("Sincronizar");
         config.add("Sobre IO");*/
+       /* String[] configuraciones = new String[] { "Nota Rapida", "Venus", "Earth", "Mars",
+                "Jupiter", "Saturn", "Uranus", "Neptune"};
+        ArrayList<String> config = new ArrayList<String>();
+        config.addAll( Arrays.asList(configuraciones) );*/
 
-        adapter= new ArrayAdapter<String>(getApplicationContext(),R.layout.list_view_config,config);
+       adapter= new ArrayAdapter<String>(getApplicationContext(),R.layout.list_view_config,config);
+       // adapter = new ArrayAdapter<String>(this, R.layout.list_view_config, config);
 
         listViewConfig.setAdapter(adapter);
 
