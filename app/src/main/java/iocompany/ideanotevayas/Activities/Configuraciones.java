@@ -37,10 +37,11 @@ public class Configuraciones extends AppCompatActivity {
 
         listViewConfiguraciones.setAdapter(adapter);
 
+
     }
     public void showToolbar(String title,boolean volverButton){
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbarVerNota);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbarConfiguraciones);
         setSupportActionBar(myToolbar);
         //Titulo y Volver Atras
         getSupportActionBar().setTitle(title);

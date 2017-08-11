@@ -88,7 +88,8 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
     public boolean onOptionsItemSelected(MenuItem item) {
        switch (item.getItemId()){
            case R.id.configuraciones:
-               nuevaActivity();
+               Intent intentoConfig = new Intent(getApplicationContext(), Config.class);
+               startActivity(intentoConfig);
                break;
            case R.id.Almacenamiento:
                Intent intento22= new Intent(this,VerNota.class);
