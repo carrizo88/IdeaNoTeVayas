@@ -19,14 +19,14 @@ tools:context="iocompany.ideanotevayas.Activities.NotaRapidaConfig">
         android:layout_below="@+id/toolbarNotaRapidaConfigActivity"
         android:textSize="25dp"/>
 
-    <TextView
-        android:id="@+id/textViewNotaRapidaConfig3"
+    <Button
+        android:id="@+id/buttonNotaRapidaConfig"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/switchNotaRapidaConfig"
         android:layout_marginTop="15dp"
-        android:text="TextView" />
+        android:text="Configurar" />
     <!--
     <ListView
         android:id="@+id/ListViewNotaRapidaConfig"
