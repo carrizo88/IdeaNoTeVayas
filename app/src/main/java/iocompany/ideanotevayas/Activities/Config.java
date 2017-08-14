@@ -55,7 +55,7 @@ public class Config extends AppCompatActivity {
         listViewConfig.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ItemClicked item = adapter.getItemAtPosition(position);
+                //ItemClicked item = adapter.getItemAtPosition(position);
             }
         });
 

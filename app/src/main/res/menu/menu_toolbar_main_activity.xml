@@ -14,7 +14,7 @@
         android:title="Enviar Nota" />
     <item
         android:id="@+id/Almacenamiento"
-        android:title="Almacenamiento" />
+        android:title="Cofig Nota Rapida" />
     <item
         android:id="@+id/IoTeam"
         android:title="IO Team" />
