@@ -7,9 +7,7 @@
     <uses-feature android:name="android.hardware.sensor.gyroscope"
         android:required="true" />
 
-    <service
-        android:name=".Servicios.ServicioNotaRapida"
-        android:exported="false"/>
+
 
     <application
         android:name=".App.MyApplicacion"
@@ -55,6 +53,10 @@
         </activity>
         <activity android:name=".Activities.NotaRapidaConfig" />
         <activity android:name=".Activities.NotaRapidaSet"></activity>
+
+        <service
+            android:name=".Servicios.ServicioNotaRapida"
+            android:exported="false"/>
     </application>
 
 </manifest>

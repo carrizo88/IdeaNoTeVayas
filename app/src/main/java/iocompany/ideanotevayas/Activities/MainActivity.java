@@ -3,7 +3,6 @@ package iocompany.ideanotevayas.Activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,17 +12,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
-
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
 import io.realm.RealmResults;
 import iocompany.ideanotevayas.Adaptadores.NotaAdaptador;
 import iocompany.ideanotevayas.Modelos.Nota;
 import iocompany.ideanotevayas.R;
+import iocompany.ideanotevayas.Servicios.ServicioNotaRapida;
 
 public class MainActivity extends AppCompatActivity implements RealmChangeListener<RealmResults<Nota>> {
 
@@ -42,6 +38,10 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
 
         showToolbar("Idea No Te Vayas",false);
         prefs();
+
+        //Servicio 2
+        Intent intentoServicio = new Intent(this, ServicioNotaRapida.class);
+        startService(intentoServicio);
 
 
 

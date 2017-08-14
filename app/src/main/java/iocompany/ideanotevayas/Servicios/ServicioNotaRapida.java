@@ -27,6 +27,7 @@ public class ServicioNotaRapida extends Service {
     private ServiceHandler mServiceHandler;
 
     private int movimiento=0;
+    private int movimiento2=0;
 
 
     // Handler that receives messages from the thread
@@ -81,7 +82,7 @@ public class ServicioNotaRapida extends Service {
             public void onSensorChanged(SensorEvent sensorEvent) {
                 // More code goes here
 
-                if(sensorEvent.values[2] > 2.5f) { // anticlockwise
+                if(sensorEvent.values[2] > 2.7f) { // anticlockwise
 
                     movimiento++;
                     if(movimiento>=4 ){
@@ -92,7 +93,7 @@ public class ServicioNotaRapida extends Service {
                         startActivity(intent1);
                         movimiento=0;
                     }
-                } else if(sensorEvent.values[2] < -2.5f) { // clockwise
+                } else if(sensorEvent.values[2] < -2.7f) { // clockwise
                     Toast.makeText(ServicioNotaRapida.this, "Mov Clockwise"+movimiento, Toast.LENGTH_SHORT).show();
                 }
             }
