@@ -52,7 +52,12 @@
                 android:value=".Activities.MainActivity" />
         </activity>
         <activity android:name=".Activities.NotaRapidaConfig" />
-        <activity android:name=".Activities.NotaRapidaSet"></activity>
+        <activity android:name=".Activities.NotaRapidaSet">
+            android:parentActivityName=".Activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
 
         <service
             android:name=".Servicios.GiroscopioNotaRapida"
