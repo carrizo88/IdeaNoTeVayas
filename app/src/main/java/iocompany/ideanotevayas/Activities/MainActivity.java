@@ -19,7 +19,8 @@ import io.realm.RealmResults;
 import iocompany.ideanotevayas.Adaptadores.NotaAdaptador;
 import iocompany.ideanotevayas.Modelos.Nota;
 import iocompany.ideanotevayas.R;
-import iocompany.ideanotevayas.Servicios.ServicioNotaRapida;
+import iocompany.ideanotevayas.Servicios.AcelerometroNotaRapida;
+import iocompany.ideanotevayas.Servicios.GiroscopioNotaRapida;
 
 public class MainActivity extends AppCompatActivity implements RealmChangeListener<RealmResults<Nota>> {
 
@@ -39,11 +40,14 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
         showToolbar("Idea No Te Vayas",false);
         prefs();
 
-        //Servicio 2
-        Intent intentoServicio = new Intent(this, ServicioNotaRapida.class);
-        startService(intentoServicio);
+      /*  //Servicio Giroscopio
+        Intent intentoServicio = new Intent(this, GiroscopioNotaRapida.class);
+        //startService(intentoServicio);
+        //Servicio Acelerometro
+        Intent intentoServicio2 = new Intent(this, AcelerometroNotaRapida.class);
+        startService(intentoServicio2);
 
-
+*/
 
         btnAddFloating =(FloatingActionButton)findViewById(R.id.BtnAddFloating2);
         btnAddFloating.setOnClickListener(new View.OnClickListener() {
@@ -158,8 +162,9 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
     private void prefs(){
         prefs=getSharedPreferences("Preferences", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-            editor.putBoolean("NotaRapida",false);
+            editor.putBoolean("NotaRapida",true);
             editor.apply();
+
     }
 
 

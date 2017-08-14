@@ -55,7 +55,10 @@
         <activity android:name=".Activities.NotaRapidaSet"></activity>
 
         <service
-            android:name=".Servicios.ServicioNotaRapida"
+            android:name=".Servicios.GiroscopioNotaRapida"
+            android:exported="false"/>
+        <service
+            android:name=".Servicios.AcelerometroNotaRapida"
             android:exported="false"/>
     </application>
 

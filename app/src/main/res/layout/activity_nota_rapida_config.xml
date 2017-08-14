@@ -19,24 +19,74 @@ tools:context="iocompany.ideanotevayas.Activities.NotaRapidaConfig">
         android:layout_below="@+id/toolbarNotaRapidaConfigActivity"
         android:textSize="25dp"/>
 
+    <ToggleButton
+        android:id="@+id/toggleButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:layout_below="@+id/buttonNotaRapidaConfig"
+        android:layout_alignEnd="@+id/buttonNotaRapidaConfig"
+        android:layout_marginTop="95dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/toggleButton3" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupNotaRapidaConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/switchNotaRapidaConfig"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonGiroscopio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Giroscopio"
+            android:visibility="invisible"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonAcelerometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Acelerometro"
+            android:visibility="invisible"/>
+    </RadioGroup>
+
     <Button
         android:id="@+id/buttonNotaRapidaConfig"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/switchNotaRapidaConfig"
+        android:layout_below="@+id/radioGroupNotaRapidaConfig"
         android:layout_marginTop="15dp"
         android:text="Configurar" />
-    <!--
-    <ListView
-        android:id="@+id/ListViewNotaRapidaConfig"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarNotaRapidaConfigActivity"
-        />
-    -->
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/radioGroupNotaRapidaConfig"
+        android:text="Acelerometro" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignTop="@+id/toggleButton3"
+        android:text="Giroscopio" />
 
 </RelativeLayout>
 

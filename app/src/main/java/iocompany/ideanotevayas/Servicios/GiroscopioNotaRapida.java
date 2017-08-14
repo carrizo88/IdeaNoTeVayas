@@ -21,7 +21,7 @@ import iocompany.ideanotevayas.Activities.CrearNota;
  * Created by PC on 13/08/2017.
  */
 
-public class ServicioNotaRapida extends Service {
+public class GiroscopioNotaRapida extends Service {
 
     private Looper mServiceLooper;
     private ServiceHandler mServiceHandler;
@@ -86,7 +86,7 @@ public class ServicioNotaRapida extends Service {
 
                     movimiento++;
                     if(movimiento>=4 ){
-                        Intent intent1 = new Intent(ServicioNotaRapida.this, CrearNota.class);
+                        Intent intent1 = new Intent(GiroscopioNotaRapida.this, CrearNota.class);
                         intent1.setAction(Intent.ACTION_VIEW);
                         intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         intent1.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
@@ -94,7 +94,7 @@ public class ServicioNotaRapida extends Service {
                         movimiento=0;
                     }
                 } else if(sensorEvent.values[2] < -2.7f) { // clockwise
-                    Toast.makeText(ServicioNotaRapida.this, "Mov Clockwise"+movimiento, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GiroscopioNotaRapida.this, "Mov Clockwise"+movimiento, Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -126,6 +126,6 @@ public class ServicioNotaRapida extends Service {
     }
     @Override
     public void onDestroy() {
-        Toast.makeText(this, "service done", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "service done Giroscopio", Toast.LENGTH_SHORT).show();
     }
 }

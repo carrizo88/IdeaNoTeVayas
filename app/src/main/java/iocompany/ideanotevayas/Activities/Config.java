@@ -1,5 +1,6 @@
 package iocompany.ideanotevayas.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -51,6 +52,12 @@ public class Config extends AppCompatActivity {
         ListViewConfigAdapter configAdapter = new ListViewConfigAdapter(getApplicationContext(),R.layout.list_view_config,config);
         listViewConfig.setAdapter(configAdapter);
 
+        listViewConfig.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ItemClicked item = adapter.getItemAtPosition(position);
+            }
+        });
 
     }
     public void showToolbar(String title,boolean volverButton){
