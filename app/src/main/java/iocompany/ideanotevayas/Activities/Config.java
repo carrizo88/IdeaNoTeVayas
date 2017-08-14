@@ -3,6 +3,8 @@ package iocompany.ideanotevayas.Activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -10,13 +12,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import iocompany.ideanotevayas.Adaptadores.ListViewConfigAdapter;
 import iocompany.ideanotevayas.R;
 
 public class Config extends AppCompatActivity {
 
     private ListView listViewConfig;
     private List<String> config;
-    private ArrayAdapter<String> adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,23 +30,26 @@ public class Config extends AppCompatActivity {
 
         listViewConfig=(ListView)findViewById(R.id.ListViewConfig);
 
-        config=new ArrayList<String>();
-        config.add("Hola");
-        /*config.add("Nota Rapida");
+        config=new ArrayList<>();
+
+        config.add("Nota Rapida");
         config.add("Envio de nota por Email");
         config.add("Almacenamiento de Notas");
         config.add("Buscar Actualizaciones");
         config.add("Sincronizar");
-        config.add("Sobre IO");*/
-       /* String[] configuraciones = new String[] { "Nota Rapida", "Venus", "Earth", "Mars",
-                "Jupiter", "Saturn", "Uranus", "Neptune"};
-        ArrayList<String> config = new ArrayList<String>();
-        config.addAll( Arrays.asList(configuraciones) );*/
+        config.add("Sobre IO");
 
-       adapter= new ArrayAdapter<String>(getApplicationContext(),R.layout.list_view_config,config);
-       // adapter = new ArrayAdapter<String>(this, R.layout.list_view_config, config);
 
-        listViewConfig.setAdapter(adapter);
+        listViewConfig.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Aca lo que haga en el click
+            }
+
+        });
+        // Enlazamos adaptador personalizado
+        ListViewConfigAdapter configAdapter = new ListViewConfigAdapter(getApplicationContext(),R.layout.list_view_config,config);
+        listViewConfig.setAdapter(configAdapter);
 
 
     }

@@ -1,6 +1,8 @@
 package iocompany.ideanotevayas.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
     private RealmResults<Nota> notas;
     private NotaAdaptador adaptador;
     private ListView listView;
+    private SharedPreferences prefs;
 
 
     @Override
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
         setContentView(R.layout.activity_main);
 
         showToolbar("Idea No Te Vayas",false);
+        prefs();
 
 
 
@@ -92,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
                startActivity(intentoConfig);
                break;
            case R.id.Almacenamiento:
-               Intent intento22= new Intent(this,VerNota.class);
+               Intent intento22= new Intent(this,NotaRapidaConfig.class);
                startActivity(intento22);
                break;
            default:
@@ -141,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
         startActivity(intento);
     }
     //Icono,Titulo y Volver Atras TOOLBAR
-    public void showToolbar(String title,boolean volverButton){
+    private void showToolbar(String title,boolean volverButton){
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbarMainActivity);
         setSupportActionBar(myToolbar);
@@ -151,9 +155,12 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
        // myToolbar.setOverflowIcon(getDrawable(R.drawable.ic_menu_toolbar));
         myToolbar.setOverflowIcon(getResources().getDrawable(R.drawable.ic_menu_toolbar2));
     }
-    public void nuevaActivity(){
-        Intent intentoConfig = new Intent(this, Configuraciones.class);
-        startActivity(intentoConfig);
+    private void prefs(){
+        prefs=getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("NotaRapida",false);
+            editor.apply();
     }
+
 
 }
